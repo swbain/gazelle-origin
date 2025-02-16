@@ -33,7 +33,7 @@ class GazelleAPI:
         self.session.headers.update({'Authorization': api_key})
 
     def request(self, action, **kwargs):
-        ajaxpage = 'https://redacted.ch/ajax.php'
+        ajaxpage = 'https://redacted.sh/ajax.php'
         params = {'action': action}
         params.update(kwargs)
 
@@ -92,7 +92,7 @@ class GazelleAPI:
             'File count':     torrent['fileCount'],
             'Info hash':      torrent['infoHash'],
             'Uploaded':       torrent['time'],
-            'Permalink':      'https://redacted.ch/torrents.php?torrentid={0}'.format(torrent['id']),
+            'Permalink':      'https://redacted.sh/torrents.php?torrentid={0}'.format(torrent['id']),
         }.items()}
 
         dump = yaml.dump(dict, width=float('inf'), sort_keys=False, allow_unicode=True)
